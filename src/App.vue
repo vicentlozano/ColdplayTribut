@@ -153,5 +153,8 @@ h3 {
   h1 {
     grid-column: 1 / -1;
   }
+  .principal-grid {
+    grid-template-rows: minmax(auto, auto) 1fr minmax(60px, auto);
+  }
 }
 </style>
