@@ -9,8 +9,8 @@
       <div :class="bool ? 'show' : 'no-show'">
         <ul class="list-group">
           <li class="list-group-item">{{ title }}</li>
-          <li class="list-group-item">{{ price }}</li>
-          <li class="list-group-item">{{ year }}</li>
+          <li class="list-group-item">Precio: {{ price }}</li>
+          <li class="list-group-item">Año publicación: {{ year }}</li>
           <li class="list-group-item"><a :href="link">Comprar</a></li>
           <li class="list-group-item">
             <button @click="bool = !bool" class="close">volver</button>
@@ -51,10 +51,9 @@ const bool = ref(false)
   border-bottom-right-radius: 0px;
 }
 .img-disc {
-  height: 100%;
-  width: 200px;
-  min-height: 200px;
-  border-top-left-radius: 25px;
+  height: 300px;
+  width: 230px;
+  border-top-left-radius: 16px;
 }
 h5 {
   display: flex;
@@ -107,11 +106,16 @@ li {
 li:first-child {
   border-top-right-radius: 18px;
 }
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .open {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   color: white;
   transition: all 1s ease;
@@ -129,6 +133,10 @@ li:first-child {
   color: black;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  
+  
 }
 </style>

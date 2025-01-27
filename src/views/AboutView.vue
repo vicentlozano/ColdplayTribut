@@ -1,8 +1,8 @@
 <template>
   <div class="about">
-    <div class="paralax"></div>
-    <h3>COMPONENTES</h3>
-    <section class="components">
+    <div class="paralax" aria-hidden="true"></div> <!-- Añadido aria-hidden para el fondo -->
+    <h3 id="components-heading">COMPONENTES</h3>
+    <section class="components" role="complementary" aria-labelledby="components-heading">
       <PersonCard
         name="Chris Martin"
         age="46"
@@ -10,6 +10,7 @@
         curiosities="Lider de la banda, exesposo de Gwyneth Paltrow."
         img="../../public/chrisMartins.jpg"
         link="https://es.wikipedia.org/wiki/Chris_Martin"
+        aria-label="Chris Martin, vocalista y pianista de Coldplay"
       />
       <PersonCard
         name="Jonny Buckland"
@@ -18,6 +19,7 @@
         curiosities="Fundador de la banda junto con Chris Martin."
         img="../../public/jonny.jpg"
         link="https://es.wikipedia.org/wiki/Jonny_Buckland"
+        aria-label="Jonny Buckland, guitarrista de Coldplay"
       />
       <PersonCard
         name="Will Champion"
@@ -26,6 +28,7 @@
         curiosities="Miembro más experimentado de la banda."
         img="../../public/WillChampion.jpg"
         link="https://es.wikipedia.org/wiki/Will_Champion"
+        aria-label="Will Champion, baterista de Coldplay"
       />
       <PersonCard
         name="Guy Berryman"
@@ -34,10 +37,11 @@
         curiosities="Es un gran amante del diseño y la fotografía."
         img="../../public/GuyBerryman.jpg"
         link="https://es.wikipedia.org/wiki/Guy_Berryman"
+        aria-label="Guy Berryman, bajista de Coldplay"
       />
     </section>
-    <section class="history">
-      <h3>HISTORIA DEL GRUPO</h3>
+    <section class="history" role="region" aria-labelledby="history-heading">
+      <h3 id="history-heading">HISTORIA DEL GRUPO</h3>
       <div class="information">
         <p>
           Coldplay es una banda británica de rock alternativo formada en Londres en 1997. Está
@@ -72,70 +76,81 @@
     </section>
   </div>
 </template>
-<script setup lang="ts">
+
+<script setup>
 import PersonCard from '@/components/PersonCard.vue'
 </script>
-<style scoped>
-.paralax {
-  display: flex;
-  width: 100%;
-  height: 70vh;
-  background-image: url('../assets/coldplaybib.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-color: black;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: center;
-}
-.components {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-auto-flow: row;
-  align-items: center;
-  margin: 3rem 0;
-  gap: 2rem;
-  justify-items: center;
-}
-.about {
-  display: flex;
-  flex-direction: column;
-}
-h3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3em;
-  font-weight: 900;
-  height: 200px;
-  width: 100%;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-  text-align: center;
-  letter-spacing: 0.1em;
-}
-.information p {
-  padding: 2em;
-  font-size: larger;
-  text-align: justify;
-}
 
-@media (max-width: 1200px) {
-  .components {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
-  }
-}
+<!-- !!!!!Escit en Saas !!!!!-->
+<style lang="sass" scoped>
+$primary-color: black
+$secondary-color: white
+$font-size-large: 3em
+$font-size-medium: 2em
+$font-weight-bold: 900
+$gap-spacing: 2rem
+$margin-spacing: 3rem
+$height-paralax-large: 70vh
+$height-paralax-small: 30vh
 
-@media (max-width: 768px) {
-  .components {
-    grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
-  }
-  h3 {
-    font-size: 2em;
-  }
-  .paralax {
-    height: 30vh;
-    background-position-y: 20%;
-  }
-}
+.paralax
+  display: flex
+  width: 100%
+  height: $height-paralax-large
+  background-image: url('../assets/coldplaybib.jpg')
+  background-attachment: fixed
+  background-position: center
+  background-color: $primary-color
+  background-repeat: no-repeat
+  background-size: contain
+  background-position-x: center
+
+.components
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  grid-auto-flow: row
+  align-items: center
+  margin: $margin-spacing 0
+  gap: $gap-spacing
+  justify-items: center
+
+.about
+  display: flex
+  flex-direction: column
+
+h3
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: $font-size-large
+  font-weight: $font-weight-bold
+  height: 200px
+  width: 100%
+  background: -webkit-linear-gradient(90deg,#222120,#312e26,#45423a)
+  background: linear-gradient(90deg,#222120,#312e26,#45423a)
+  border-top: 2px solid $secondary-color
+  border-bottom: 2px solid $secondary-color
+  text-align: center
+  letter-spacing: 0.1em
+
+.information
+  p
+    padding: 2em
+    font-size: larger
+    text-align: justify
+
+@media (max-width: 1200px)
+  .components
+    grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 768px)
+  .components
+    grid-template-columns: 1fr
+
+  h3
+    font-size: $font-size-medium
+
+  .paralax
+    height: $height-paralax-small
+    background-position-y: 20%
 </style>

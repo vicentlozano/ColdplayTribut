@@ -75,6 +75,7 @@ footer {
   justify-items: center;
   align-items: center;
   width: 100%;
+  height: 100%;
   border-bottom: 2px solid white;
   gap: 2px;
 }
@@ -122,6 +123,7 @@ img {
 h1 {
   padding: 1rem;
   letter-spacing: 0.3em;
+  font-weight: bold;
 }
 h3 {
   font-size: larger;
