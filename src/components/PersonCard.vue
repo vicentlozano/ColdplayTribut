@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="card" style="width: 18rem">
-      <img :src="img" class="card-img-top" alt="..." />
+      <img :src="img" class="card-img-top" :alt="props.name" />
       <div class="card-body">
         <h5 class="card-title">{{ props.name }}</h5>
         <p class="card-text">Edad: {{ age }}</p>
@@ -31,14 +31,13 @@ img {
   object-fit: cover;
 }
 .card-body {
-    background-color: rgb(49, 49, 46);
-    color: whitesmoke;
+  background-color: rgb(49, 49, 46);
+  color: whitesmoke;
 }
 .card {
-    transition: transform 0.3s ease-out ;
+  transition: transform 0.3s ease-out;
 }
 .card:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
-
 </style>

@@ -128,31 +128,31 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="../../public/premio1.jpg" class="custom-image" alt="..." />
+              <img src="../../public/premio1.jpg" class="custom-image" alt="Grammy Awards" />
               <div class="carousel-caption d-none d-md-block">
                 <h5>Grammy Awards</h5>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="../../public/premio6.jpg" class="custom-image" alt="..." />
+              <img src="../../public/premio6.jpg" class="custom-image" alt="Brit awards" />
               <div class="carousel-caption d-none d-md-block">
                 <h5>Brit awards</h5>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="../../public/premio4.jpg" class="custom-image" alt="..." />
+              <img src="../../public/premio4.jpg" class="custom-image" alt="Brit Awards" />
               <div class="carousel-caption d-none d-md-block">
                 <h5>Brit Awards</h5>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="../../public/premio3.jpg" class="custom-image" alt="..." />
+              <img src="../../public/premio3.jpg" class="custom-image" alt="Chris Martin, Paul McCartney y Jonny Buckland" />
               <div class="carousel-caption d-none d-md-block">
                 <h5>Chris Martin, Paul McCartney y Jonny Buckland</h5>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="../../public/premio5.jpg" class="custom-image" alt="..." />
+              <img src="../../public/premio5.jpg" class="custom-image" alt="Brit Awards" />
               <div class="carousel-caption d-none d-md-block">
                 <h5>Brit Awards</h5>
               </div>
