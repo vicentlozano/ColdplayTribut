@@ -130,7 +130,7 @@ h3 {
   padding: 0.3rem;
   margin: 0;
 }
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
   .nav {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1.5fr 1.5fr;
